@@ -40,3 +40,14 @@ t(
   'https://codeload.github.com/isaacs/readable-stream/tar.gz/master'
 )
 
+t(
+  'bigeasy/locket',
+  'https://codeload.github.com/bigeasy/locket/tar.gz/master'
+)
+
+t(
+  'dominictarr/npmd#v1',
+  'https://codeload.github.com/dominictarr/npmd/tar.gz/v1'
+)
+
+
