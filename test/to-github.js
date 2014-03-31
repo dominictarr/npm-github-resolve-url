@@ -51,3 +51,9 @@ t(
 )
 
 
+t(
+  'https://registry.npmjs.org/curry/-/curry-1.2.0.tgz',
+  'https://registry.npmjs.org/curry/-/curry-1.2.0.tgz'
+)
+
+
