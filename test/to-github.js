@@ -29,6 +29,10 @@ t(
   'shtylman/engine.io-client#v0.5.0-dz0',
   'https://codeload.github.com/shtylman/engine.io-client/tar.gz/v0.5.0-dz0'
 )
+t(
+  'git://github.com/shtylman/engine.io-client#v0.5.0-dz0',
+  'https://codeload.github.com/shtylman/engine.io-client/tar.gz/v0.5.0-dz0'
+)
 
 t(
   'substack/sockjs-client.git#browserify-npm',
