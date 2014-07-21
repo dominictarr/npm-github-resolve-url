@@ -6,7 +6,6 @@ var toGithub = require('../')
 function t (giturl, url) {
   test(giturl + ' -> ' +url, function (t) {
     var _url = toGithub(giturl)
-    console.log(_url)
     t.equal(_url, url)
     t.end()
   })
@@ -40,7 +39,12 @@ t(
 )
 
 t(
-  'git+ssh://git@github.com:isaacs/readable-stream.git',
+  'git+ssh://git@github.com:isaacs/readable-stream.git#master',
+  'https://codeload.github.com/isaacs/readable-stream/tar.gz/master'
+)
+
+t(
+  'git+ssh://github.com:isaacs/readable-stream.git',
   'https://codeload.github.com/isaacs/readable-stream/tar.gz/master'
 )
 
@@ -60,4 +64,13 @@ t(
   'https://registry.npmjs.org/curry/-/curry-1.2.0.tgz'
 )
 
+t(
+ 'git+ssh://github.com/ariya/esprima.git#harmony',
+  'https://codeload.github.com/ariya/esprima/tar.gz/harmony'
+)
+
+t(
+ 'git+https://github.com/ariya/esprima.git#harmony',
+  'https://codeload.github.com/ariya/esprima/tar.gz/harmony'
+)
 
