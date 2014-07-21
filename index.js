@@ -8,7 +8,10 @@ module.exports = function toGithub (repo) {
   var m = /^(?:https?|git):\/\/github.com\/([^/]+\/[^/]+)\/archive\/(.+)\.tar\.gz$/.exec(repo)
 
   if(!m)
-    m = /^(?:git\+ssh:\/\/git@github.com:)([^/]+\/[^/#]+?)(?:\.git)?(?:#(.*))?$/.exec(repo)
+    m = /^(?:git\+(?:ssh|https):\/\/(?:git@)?github.com(?::|\/))([^/]+\/[^/#]+?)(?:\.git)?(?:#(.*))?$/.exec(repo)
+
+  if(!m)
+    m = /^(?:git\+ssh:\/\/github.com:)([^/]+\/[^/#]+?)(?:\.git)?(?:#(.*))?$/.exec(repo)
 
   if(!m)
     m = /^(?:(?:git|https?):\/\/github.com\/)?([^/]+\/[^/#]+?)(?:\.git)?(?:#(.*))?$/.exec(repo)
